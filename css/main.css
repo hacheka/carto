@@ -1,0 +1,203 @@
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif; 
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+#miss-liberty {
+    margin-top: -10px;
+}
+
+#canvas-container {
+    width: 100%;
+    text-align: center;
+    position: relative;  
+}
+
+#the-canvas {
+    border: 0px;
+    margin: 0 auto;
+    z-index: 10;
+}
+
+#hud {
+    background-color: #225378;
+    height: 64px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 20;
+}
+
+.zoom-in, .zoom-out {
+    background-color: rgba(255, 255, 255, .5);
+    font-size: 700;
+    display: inline-block;
+    color: white;
+    font-size: 64px;
+    z-index: 20;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.zoom-in {
+    position: absolute;
+    bottom: 180px;
+    left: 16px;    
+}
+
+.zoom-out {
+    position: absolute;
+    bottom: 96px;
+    left: 16px;      
+}
+
+.zoom-in span {
+    position: absolute;
+    top: -19px;
+    left: 13px;
+}
+
+.zoom-out span {
+    position: absolute;
+    top: -16px;
+    left: 20px;
+}
+
+.carto-logo {
+    position: absolute;
+    bottom: 80px;
+    right: 16px;    
+    z-index: 20;
+}
+
+#hud .title {
+    font-size: 700;
+    color: white;
+    font-size: 24px;
+    margin: 14px auto 0 auto;
+    display: inline-block;
+}
+
+.arrows-warning {
+    color: white;
+    position: absolute;
+    top: 22px;
+    right: 16px;
+    font-size: 12px;
+
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (max-device-width: 568px) {
+    .arrows-warning {
+        display: none;
+        opacity: 0;
+    }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}

@@ -1,0 +1,70 @@
+https://rambo-test.carto.com:443/api/v2/sql?q=select * from public.mnmappluto limit 20
+
+https://rambo-test.carto.com:443/api/v2/sql?q=select ST_Extent(the_geom) as table_extent from public.mnmappluto
+
+https://rambo-test.carto.com:443/api/v2/sql?q=select ST_Point(the_geom) from public.mnmappluto limit 2
+
+https://rambo-test.carto.com:443/api/v2/sql?q=select ST_X(ST_Centroid(the_geom)) from public.mnmappluto limit 5
+
+https://rambo-test.carto.com:443/api/v2/sql?q=select ST_X(ST_Transform(ST_Centroid(the_geom),4326)) from public.mnmappluto limit 5
+
+https://rambo-test.carto.com:443/api/v2/sql?q=select ST_AsGeoJSON(ST_Transform(ST_Centroid(the_geom),4326)) from public.mnmappluto limit 5
+
+https://rambo-test.carto.com:443/api/v2/sql?q=select st_y(the_geom) as lat, st_x(the_geom) as lon from public.mnmappluto limit 5
+
+https://rambo-test.carto.com/api/v2/sql?q=SELECT%20count(cartodb_id)%20FROM%20public.mnmappluto%20WHERE%20ST_Intersects(the_geom,%20ST_MakeEnvelope(-74.0476149120268,%2040.6839188487963,%20-73.906791238675,%2040.8791037725182,%204326))    
+
+https://rambo-test.carto.com/api/v2/sql?q=SELECT count(cartodb_id) FROM public.mnmappluto WHERE ST_Intersects(the_geom,%20ST_MakeEnvelope(-74.0476149120268,%2040.6839188487963,%20-73.906791238675,%2040.8791037725182,%204326)) AND ST_AREA(the_geom) > 0.01 
+
+
+https://rambo-test.carto.com/api/v2/sql?q=SELECT count(cartodb_id) FROM public.mnmappluto WHERE ST_AREA(the_geom_webmercator) > 0.01
+
+SELECT count(cartodb_id)
+FROM public.mnmappluto
+WHERE ST_Inters  ects(the_geom,%20ST_MakeEnvelope(-74.0476149120268,%2040.6839188487963,%20-73.906791238675,%2040.8791037725182,%204326))
+  AND ST_AREA(the_geom) > 0.01    
+
+
+ELECT ST_Intersects(
+		ST_GeographyFromText('SRID=4326;LINESTRING(-43.23456 72.4567,-43.23456 72.4568)'),
+		ST_GeographyFromText('SRID=4326;POINT(-43.23456 72.4567772)')
+		);
+
+
+SELECT count(*)
+FROM   public.mnmappluto
+WHERE  the_geom 
+    && 
+    ST_MakeEnvelope (
+        -74.0476149120268, 40.6839188487963, 
+        -73.906791238675, 40.8791037725182,
+        )    
+
+
+SELECT
+ST_Area(
+ST_Transform(the_geom, utmzone(ST_Centroid(the_geom))
+)) 
+FROM polygons
+
+
+st_y(the_geom) as lat, st_x(the_geom) as lon
+
+address": "245 MULBERRY STREET",
+40.7230238545884, -73.9961181099197
+
+40.7522955107286,-73.9759835240924
+
+
+40.6839188487963 -74.0476149120268
+40.8791037725182 -73.906791238675 
+
+
+
+
+
+WHERE ST_AREA(the_geom) > 0.01
+
+
+
+https://rambo-test.carto.com:443/api/v2/sql?q=select ST_AsGeoJSON(the_geom_webmercator) from public.mnmappluto limit 10
